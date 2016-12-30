@@ -1,1 +1,5 @@
-# Xamarin.iOS-Cycle-Reference-Demo
+### 产生循环引用的必要条件
+
+1. 声明为成员变量
+2. 对象带有 Delegate 属性
+3. 关联 Delegate 中的某一个回调
