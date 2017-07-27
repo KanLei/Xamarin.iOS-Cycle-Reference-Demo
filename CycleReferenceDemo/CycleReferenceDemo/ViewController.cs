@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 using UIKit;
 using Foundation;
@@ -25,7 +25,6 @@ namespace CycleReferenceDemo
 
 		#region UIScrollView 有 Cycle Reference
 
-		// 如果声明为局部变量，则不会产生循环引用
 		private UIScrollView scrollView;
 		private void TestScrollView ()
 		{
@@ -110,11 +109,12 @@ namespace CycleReferenceDemo
 			testButton.BackgroundColor = UIColor.Cyan;
 			View.AddSubview (testButton);
 
-			// UIButton 竟然没有产生循环引用
+			// UIButton 竟然没有产生循环引用(特例)
 			testButton.TouchUpInside += (sender, e) => {
 				View.BackgroundColor = UIColor.Blue;
 			};
 
+			// 有循环引用
 			testButton.TouchUpInside += TestButton_TouchUpInside; ;
 		}
 
