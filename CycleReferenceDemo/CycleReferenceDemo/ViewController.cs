@@ -6,10 +6,8 @@ using CoreGraphics;
 
 namespace CycleReferenceDemo
 {
-	public partial class ViewController : UIViewController
+	public partial class ViewController : ViewController
 	{
-
-
 		protected ViewController (IntPtr handle) : base (handle)
 		{
 			// Note: this .ctor should not contain any initialization logic.
