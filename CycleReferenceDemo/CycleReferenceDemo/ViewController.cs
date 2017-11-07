@@ -6,7 +6,7 @@ using CoreGraphics;
 
 namespace CycleReferenceDemo
 {
-	public partial class ViewController : UViewController
+	public partial class ViewController : UIViewController
 	{
 		protected ViewController (IntPtr handle) : base (handle)
 		{
